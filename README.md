@@ -14,14 +14,10 @@ My first android aaplication using API.
  <br/>
  <br/>
  <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
  
- 
- 
- ### Search option
- <ul>
-<li>Line 1</li>
-<li>Line 2</li>
-
-
-</ul>
-  
