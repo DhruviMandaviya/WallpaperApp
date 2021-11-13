@@ -26,4 +26,30 @@ My first android aaplication using REST API. In this application I used pexels w
 
 
 #### USED LIBRARYS
+# PhotoView
+PhotoView aims to help produce an easily usable implementation of a zooming Android ImageView.
 
+## Dependency
+
+Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
+
+```gradle
+allprojects {
+    repositories {
+        maven { url "https://www.jitpack.io" }
+    }
+}
+
+buildscript {
+    repositories {
+        maven { url "https://www.jitpack.io" }
+    }	
+}
+```
+
+Then, add the library to your module `build.gradle`
+```gradle
+dependencies {
+    implementation 'com.github.chrisbanes:PhotoView:latest.release.here'
+}
+```
