@@ -66,3 +66,17 @@ stack, but also includes utility libraries plug in to Google's Volley project or
 Glide's primary focus is on making scrolling any kind of a list of images as smooth and fast as possible, but Glide is
 also effective for almost any case where you need to fetch, resize, and display a remote image.
 
+use Gradle:
+
+```gradle
+repositories {
+  google()
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'com.github.bumptech.glide:glide:4.12.0'
+  annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+}
+```
+
