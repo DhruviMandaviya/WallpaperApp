@@ -21,5 +21,6 @@ My first android aaplication using API.
 
  #### SAVE WALLPAPER
  
- <img  img align="left" src="https://user-images.githubusercontent.com/68688918/141609108-a2e61b06-994d-4ff0-8d3b-dd6e32c5f6e1.jpeg" width="250px">
- <img   img src="https://user-images.githubusercontent.com/68688918/141609109-cd5623bb-cf6d-4c4b-8964-7cd923c36673.jpeg" width="250px">
+ <img  img align="left" src="https://user-images.githubusercontent.com/68688918/141609392-363af117-2565-4cb6-be2c-49c15e501922.jpeg" width="250px">
+ <img   img src="https://user-images.githubusercontent.com/68688918/141609396-4fbd0b2c-563b-437f-8845-4403f90d8945.jpeg" width="250px">
+
