@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     int PageNumber=1;
     boolean isScrolling= false;
     int currentItem, totalItem, scrollingOutItem;
-    String uri="https://api.pexels.com/v1/curated/?page="+PageNumber+"&per_page=80";
+    String uri="https://api.pexels.com/v1/curated/?page="+PageNumber+"&per_page=30";
 
 
     @Override
@@ -92,24 +92,26 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            JSONObject jsonObject= new JSONObject(response);
-                            JSONArray jsonArray=jsonObject.getJSONArray("photos");
+                            JSONObject jsonObject = new JSONObject(response);
+
+                            JSONArray jsonArray= jsonObject.getJSONArray("photos");
 
                             int length = jsonArray.length();
 
                             for(int i=0;i<length;i++)
                             {
-                                JSONObject object= jsonArray.getJSONObject(i);
+                                JSONObject object = jsonArray.getJSONObject(i);
 
-                                int id=object.getInt("id");
+                                int id = object.getInt("id");
 
-                                JSONObject objectImage=object.getJSONObject("src");
+                                JSONObject objectImages = object.getJSONObject("src");
 
-                                String ordinalUrl=objectImage.getString("original");
-                                String mediumURL=objectImage.getString("medium");
+                                String orignalUrl = objectImages.getString("original");
+                                String mediumUrl = objectImages.getString("medium");
 
-                                WallpaperModel wallpaperModel=new WallpaperModel(id,ordinalUrl,mediumURL);
+                                WallpaperModel wallpaperModel = new WallpaperModel(id,orignalUrl,mediumUrl);
                                 wallpaperModelList.add(wallpaperModel);
+
                             }
                             wallpaperAdapter.notifyDataSetChanged();
                             PageNumber++;
@@ -127,9 +129,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }){
             @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
+            public Map<String, String> getHeaders() {
                 Map<String,String> params= new HashMap<>();
-                params.put("Authorization","563492ad6f91700001000001914986c0951d407c817f8156adcd2538");
+                params.put("Authorization","563492ad6f917000010000011069c623c7ad4919b7f934771d8adbe9");
                 return params;
             }
         };
@@ -164,11 +166,10 @@ public class MainActivity extends AppCompatActivity {
 
                     String query= editText.getText().toString().toLowerCase();
 
-                    uri="https://api.pexels.com/v1/search/?page="+PageNumber+"&per_page=80&query="+query;
+                    uri="https://api.pexels.com/v1/search/?page="+PageNumber+"&per_page=30&query="+query;
 
                     wallpaperModelList.clear();
                     FetchWallpaper();
-
                 }
             });
 
