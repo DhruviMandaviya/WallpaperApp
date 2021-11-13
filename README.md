@@ -1,5 +1,5 @@
 # WallpaperApp
-My first android aaplication using API.
+My first android aaplication using REST API. In this application I used pexels website for creating API and load images from website to local application. As well we can save this images in our local system. 
 
 # Demo
 
